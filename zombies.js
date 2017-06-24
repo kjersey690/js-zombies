@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /**
  * Class => Item(name)
  * -----------------------------
@@ -7,8 +8,21 @@
  * @param {string} name     The item's name.
  * @property {string} name
  */
+ class Item{
+  constructor(name){
+    this.name=name;
+  }
+}
 
 
+
+ class Weapon extends Item{
+  constructor(name, damage){
+    super(name);
+    this.damage=damage;
+  // var weapon = new Weapon();
+}
+}
 /**
  * Class => Weapon(name, damage)
  * -----------------------------
@@ -31,7 +45,12 @@
  * -----------------------------
  */
 
-
+class Food extends Item {
+  constructor(name,energy){
+    super(name);
+    this.energy=energy;
+}
+}
 
 /**
  * Class => Food(name, energy)
@@ -55,6 +74,29 @@
  * -----------------------------
  */
 
+class Player{
+  constructor(name, health, strength, speed){
+  this.name=name;
+  this.health=health;
+  this.strength=strength;
+  this.speed=speed;
+  this.isAlive=true;
+  this._pack=[];
+  this.getPack=function(){
+    return pack;
+  };
+ this.getMaxHealth=function(){
+  return maxHealth;
+};
+  this.getMaxHealth=health;
+  this.equipped=false;
+}
+
+
+
+
+
+}
 
 
 /**
